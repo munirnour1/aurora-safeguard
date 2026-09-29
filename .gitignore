@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────
+# Dependências
+# ─────────────────────────────────────────────
+node_modules/
+
+# ─────────────────────────────────────────────
+# Build e artefatos gerados
+# ─────────────────────────────────────────────
+dist/
+*.tsbuildinfo
+
+# ─────────────────────────────────────────────
+# Segredos e configuração local
+# ─────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─────────────────────────────────────────────
+# Cache de ferramentas
+# ─────────────────────────────────────────────
+.langgraph_api/
+*.log
+
+# ─────────────────────────────────────────────
+# Sistema operacional
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────────────────────
+# Domínio Aurora: dados sensíveis
+# ─────────────────────────────────────────────
+# Material autoral disponibilizado pela professora.
+# Não redistribuir — pode conter conteúdo com direitos autorais.
+data/materials/*
+!data/materials/.gitkeep
