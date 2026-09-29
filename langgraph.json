@@ -1,0 +1,6 @@
+{
+  "graphs": {
+    "aurora-safeguard": "./src/graph/factory.ts:graph"
+  },
+  "env": ".env"
+}
