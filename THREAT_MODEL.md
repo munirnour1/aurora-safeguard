@@ -108,14 +108,40 @@ melhor aquilo que ele próprio escreveu."*).
 
 ## Fora de escopo (registro)
 
-Itens identificados mas conscientemente adiados:
+Itens identificados mas conscientemente adiados nesta versão do
+repositório. O repositório implementa apenas o que o exercício do
+Erick cobre, mais a calibração do guardrail para o contexto educacional
+(Ator B).
 
-- **Multi-tenant real.** Hoje o Aurora é Alice + professora. Quando escalar
-  para várias escolas, o vetor C ganha peso e RBAC precisa ser revisitado.
-- **Extração de system prompt.** O guardrail atual cobre como subtipo de C,
+- **Ator D (LLM via RAG adicionando conteúdo ao texto do estudante).**
+  Risco crítico para o produto Aurora (fere o princípio "a Aurora não
+  escreve pelo estudante"), mas **não é coberto pelo exercício original**.
+  A mitigação seria um `SemanticPreservationValidator` executado após o
+  LLM, validando se a sugestão preserva o sentido do texto original.
+  Fica registrado para retomada em módulos futuros do curso ou na
+  implementação real do Aurora.
+
+- **Multi-tenant real.** Hoje o Aurora é Alice + professora. Quando
+  escalar para várias escolas, o vetor C ganha peso e o RBAC precisa
+  ser revisitado.
+
+- **Extração de system prompt.** O guardrail cobre como subtipo de C,
   mas não há defesa específica contra isso.
-- **Ataques via CAA/scanning.** O texto chega ao LLM via editor. Não há
-  vetor alternativo hoje.
+
+- **Ataques via CAA/scanning.** O texto chega ao LLM via editor. Não
+  há vetor alternativo hoje.
+
+## Escopo de implementação neste repositório
+
+Alinhado com o exercício `05-safeguard-prompt-injection-z`:
+
+| Elemento | Decisão |
+|---|---|
+| Permissions | Única: `read_material`. Professora tem; Alice não. |
+| Material | Arquivo cru em `data/materials/`, RBAC por nome de arquivo. |
+| Tool MCP | `read-material-tool` recebe `user` e decide permissão. |
+| Guardrail | LLM-based (`openai/gpt-oss-safeguard-20b`), calibrado com contexto educacional (Ator B). |
+| Semantic validator | Fora de escopo (ver acima). |
 
 ## Referências
 
