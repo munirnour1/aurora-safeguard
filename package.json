@@ -5,13 +5,13 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "chat": "node --experimental-strip-types --env-file .env src/index.ts",
-    "chat:professora": "node --experimental-strip-types --env-file .env src/index.ts --user professora --message 'Leia o material da aula de história'",
-    "chat:alice:safe": "node --experimental-strip-types --env-file .env src/index.ts --user alice --prompt-path 'prompts/user/solicitar-material.txt'",
-    "chat:alice:unsafe:material": "node --experimental-strip-types --env-file .env src/index.ts --user alice --unsafe --prompt-path 'prompts/user/solicitar-material.txt'",
-    "chat:alice:unsafe:rag": "node --experimental-strip-types --env-file .env src/index.ts --user alice --unsafe --prompt-path 'prompts/user/enriquecer-com-rag.txt'",
-    "langgraph:serve": "npx @langchain/langgraph-cli dev"
-  },
+  "chat": "node --experimental-strip-types --env-file .env src/index.ts",
+  "chat:professora": "node --experimental-strip-types --env-file .env src/index.ts --user professora --message \"Leia o material da aula de história\"",
+  "chat:alice:safe": "node --experimental-strip-types --env-file .env src/index.ts --user alice --prompt-path prompts/user/solicitar-material.txt",
+  "chat:alice:unsafe:material": "node --experimental-strip-types --env-file .env src/index.ts --user alice --unsafe --prompt-path prompts/user/solicitar-material.txt",
+  "chat:alice:unsafe:rag": "node --experimental-strip-types --env-file .env src/index.ts --user alice --unsafe --prompt-path prompts/user/enriquecer-com-rag.txt",
+  "langgraph:serve": "npx @langchain/langgraph-cli dev"
+},
   "keywords": [
     "langchain",
     "langgraph",
