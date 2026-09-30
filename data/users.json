@@ -1,0 +1,14 @@
+{
+  "alice": {
+    "username": "alice",
+    "role": "member",
+    "permissions": [],
+    "displayName": "Alice"
+  },
+  "professora": {
+    "username": "professora",
+    "role": "admin",
+    "permissions": ["read_material"],
+    "displayName": "Professora"
+  }
+}

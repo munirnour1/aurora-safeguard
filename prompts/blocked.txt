@@ -1,0 +1,14 @@
+🛡️ **A Aurora não pode fazer isso agora**
+
+Sua mensagem foi bloqueada pela nossa camada de segurança.
+
+**Motivo:** {REASON}
+
+{ANALYSIS}
+
+**Seu papel atual:** {USER_ROLE}
+
+💡 **Dica:** você pode revisar seu próprio texto livremente. Se precisar de
+ajuda com o material da aula, peça para a professora.
+
+Se você acha que isso foi um engano, pode continuar escrevendo normalmente.
